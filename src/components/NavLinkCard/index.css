@@ -1,0 +1,90 @@
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link-image {
+  width: 300px;
+  border-radius: 100px;
+}
+
+.mens-glasses {
+  font-family: "Roboto";
+  font-size: 25px;
+  color: rgb(20, 22, 20);
+}
+
+.buy-now-button {
+  height: 40px;
+  width: 150px;
+  border: 0;
+  font-family: sans-serif;
+  color: #1f1d1d;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-image: linear-gradient(to right, #9ae4e3, rgb(144, 208, 216));
+  transition: all 1s linear;
+}
+
+.buy-now-button:hover {
+  background-image: linear-gradient(to right, black, black);
+  color: #ffffff;
+}
+
+.try-card-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-width: 90%;
+  justify-content: space-between;
+}
+
+.try-home-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.try-heading {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.nav-link-image-home {
+  width: 250px;
+}
+
+.try-buttons-container {
+  margin-top: 25px;
+  align-self: center;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.try-button {
+  height: 40px;
+  width: 120px;
+  border: 0;
+  font-family: sans-serif;
+  color: #1f1d1d;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  background-image: linear-gradient(to right, #9ae4e3, rgb(144, 208, 216));
+  transition: all 1s linear;
+}
+
+.try-button:hover {
+  background-image: linear-gradient(to right, black, black);
+  color: #ffffff;
+}

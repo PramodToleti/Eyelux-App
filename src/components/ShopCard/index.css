@@ -1,0 +1,137 @@
+.shop-container {
+  display: flex;
+  height: 85vh;
+}
+
+.frame-container {
+  background-image: linear-gradient(
+    135deg,
+    rgb(42, 201, 201),
+    rgb(34, 158, 158)
+  );
+  transition: all 0.3s linear;
+  cursor: pointer;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.shop-card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+}
+
+.expand-frames {
+  width: 75%;
+}
+
+.glasses-container {
+  background-image: linear-gradient(
+    135deg,
+    rgb(64, 209, 124),
+    rgb(48, 141, 94)
+  );
+  cursor: pointer;
+  transition: all 0.3s linear;
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.expand-glasses {
+  width: 75%;
+}
+
+/* Try Frames */
+
+.try-frames-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.try-frames-image {
+  margin-top: 30px;
+  width: 250px;
+}
+
+.try-frames-heading {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.try-frames-text {
+  color: #272929;
+  font-family: "Roboto";
+  font-size: 18px;
+  width: 400px;
+}
+
+@keyframes showText {
+  from {
+    width: 500px;
+    opacity: 0;
+  }
+  to {
+    width: 500px;
+    opacity: 1;
+  }
+}
+
+/* Shop Glasses */
+
+.buy-glasses-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy-glasses-heading {
+  max-width: 500px;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+}
+
+.money {
+  color: #73e7d8;
+  font-family: "Lobster";
+}
+
+.shop-glasses-image {
+  width: 250px;
+}
+
+.shop-buttons-container {
+  display: flex;
+  max-width: 300px;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.shop-button {
+  border: 0;
+  border-radius: 8px;
+  height: 45px;
+  width: 110px;
+  background-color: #ffffff;
+  color: #272929;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Roboto";
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+.shop-button:hover {
+  background-color: #272929;
+  color: #ffffff;
+}

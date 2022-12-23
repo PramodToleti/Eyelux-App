@@ -1,0 +1,39 @@
+.glass-item-container {
+  border: 1px solid rgb(163, 161, 161);
+  border-radius: 30px;
+  width: 30%;
+  padding: 40px;
+  padding-left: 50px;
+  padding-right: 70px;
+  margin-top: 50px;
+}
+
+.glass-item-container:hover {
+  box-shadow: 5px 5px 15px #00000020;
+}
+
+.glass-image {
+  width: 300px;
+  cursor: pointer;
+}
+
+.glass-image:hover {
+  box-shadow: 0px 5px 12px #00000020;
+}
+
+/*Hilton */
+
+.title-heading {
+  color: #110f11;
+  font-family: sans-serif;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 28px;
+}
+
+.no-of-colors {
+  text-align: center;
+  margin-bottom: 20px;
+}

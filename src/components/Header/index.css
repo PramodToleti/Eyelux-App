@@ -1,0 +1,72 @@
+.nav-bar {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 16px #00000020;
+}
+
+.nav-body {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-icon-container {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.icon-name {
+  margin: 0;
+  font-family: sans-serif;
+  margin-left: 5px;
+}
+
+.nav-icon {
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-links-container {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 30px;
+}
+
+.account-icons-container {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.account-icons {
+  color: rgb(12, 10, 10);
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.collapse-nav-container {
+  height: 40vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: -350px;
+  transition: all 0.5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.collapse-navbar {
+  top: 100px;
+  box-shadow: inset 0px 50px 0px 500px #00000010;
+}
+
+.glass-women-image {
+  height: 220px;
+}
