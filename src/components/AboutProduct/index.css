@@ -1,0 +1,137 @@
+.about-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container-1 {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.about-image-1 {
+  width: 600px;
+}
+
+.about-text-1 {
+  background-image: url("https://res.cloudinary.com/dlpgowt5s/image/upload/v1671896500/about-text-1_lsl2zi.png");
+  width: 40%;
+  height: 85%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text-heading-1 {
+  align-self: flex-start;
+  font-family: "Roboto";
+  background-image: linear-gradient(
+    to right,
+    rgb(106, 77, 233),
+    rgb(236, 119, 220),
+    rgb(116, 184, 247)
+  );
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.about-text-color-1 {
+  text-align: start;
+  font-family: "Roboto";
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+}
+
+.about-shop-button {
+  border: 0;
+  height: 45px;
+  width: 110px;
+  font-family: "Roboto";
+  border-radius: 8px;
+  align-self: flex-start;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+.shop-now-button-1 {
+  color: #ffffff;
+  background-color: black;
+}
+
+.shop-now-button-1:hover {
+  color: #ffffff;
+  background-color: rgb(68, 38, 240);
+}
+
+.about-container-2 {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  background-color: rgb(14, 12, 12);
+}
+
+.about-image-2 {
+  width: 600px;
+}
+
+.about-text-2 {
+  background-image: url("https://res.cloudinary.com/dlpgowt5s/image/upload/v1671897549/about-text-1_ghhnrr.png");
+  width: 40%;
+  height: 85%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text-heading-2 {
+  align-self: flex-start;
+  font-family: "Roboto";
+  background-image: linear-gradient(
+    to right,
+    rgb(225, 223, 233),
+    rgb(119, 131, 236),
+    rgb(139, 216, 139)
+  );
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 40px;
+}
+
+.about-text-color-2 {
+  text-align: start;
+  font-family: "Roboto";
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.shop-now-button-2 {
+  background-color: rgb(68, 38, 240);
+  color: #ffffff;
+}
+
+.shop-now-button-2:hover {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+}

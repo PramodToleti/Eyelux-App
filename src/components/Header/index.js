@@ -64,29 +64,22 @@ const navLinksList = [
 
 const Header = () => {
   const [isClicked, setValue] = useState(false);
+  const [isAccountActive, setAccountActive] = useState(false);
   const [isActive, setActive] = useState("");
   const [navLinks, setLinks] = useState([]);
-
-  {
-    /* Updating Nav Links List */
-  }
 
   const updateActiveNav = (id) => {
     setLinks([...navLinksList.filter((each) => each.linkId === id)]);
     setActive(id);
   };
 
-  {
-    /* Updating Active Nav Link */
-  }
-
   const CollapseNavDetails = () => {
     setValue((prevValue) => true);
   };
 
-  {
-    /* Navbar Collapse */
-  }
+  const onAccountClick = () => {
+    setAccountActive((prevValue) => !prevValue);
+  };
 
   const preventScroll = (event) => {
     event.preventDefault();
@@ -114,6 +107,18 @@ const Header = () => {
   const collapseNavBar = isClicked ? "collapse-navbar" : "";
 
   const navRef = useRef();
+
+  const accountRef = useRef();
+
+  useEffect(() => {
+    const accntHandler = (event) => {
+      if (!accountRef.current.contains(event.target)) {
+        setAccountActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", accntHandler);
+  }, [isAccountActive]);
 
   return (
     <>
@@ -146,7 +151,10 @@ const Header = () => {
             <div className="account-icons-container">
               <BiSearchAlt className="account-icons" />
               <AiOutlineShoppingCart className="account-icons" />
-              <MdOutlineAccountCircle className="account-icons" />
+              <MdOutlineAccountCircle
+                className="account-icons"
+                onClick={onAccountClick}
+              />
             </div>
           </div>
         </nav>
@@ -154,6 +162,22 @@ const Header = () => {
           {navLinks.map((each) => (
             <NavLinkCard key={each.id} cardDetails={each} />
           ))}
+        </div>
+        <div>
+          <div
+            ref={accountRef}
+            className={`account-frame ${
+              isAccountActive ? "active-account" : ""
+            }`}
+          >
+            <div className="account-items-container">
+              <p className="account-items">Home</p>
+              <p className="account-items">Store</p>
+              <p className="account-items">About</p>
+              <p className="account-items">Help</p>
+            </div>
+            <button className="logout-button">Logout</button>
+          </div>
         </div>
       </div>
     </>

@@ -1,13 +1,19 @@
 .shop-container {
-  display: flex;
-  height: 85vh;
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .shop-container {
+    display: flex;
+    height: 85vh;
+  }
 }
 
 .frame-container {
   background-image: linear-gradient(
     135deg,
-    rgb(42, 201, 201),
-    rgb(34, 158, 158)
+    rgb(230, 143, 233),
+    rgb(187, 88, 187)
   );
   transition: all 0.3s linear;
   cursor: pointer;
@@ -32,8 +38,8 @@
 .glasses-container {
   background-image: linear-gradient(
     135deg,
-    rgb(64, 209, 124),
-    rgb(48, 141, 94)
+    rgb(112, 152, 240),
+    rgb(78, 105, 196)
   );
   cursor: pointer;
   transition: all 0.3s linear;
@@ -57,7 +63,8 @@
 
 .try-frames-image {
   margin-top: 30px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
 }
 
 .try-frames-heading {
@@ -65,10 +72,11 @@
   font-family: sans-serif;
   font-weight: 500;
   font-size: 35px;
+  width: 500px;
 }
 
 .try-frames-text {
-  color: #272929;
+  color: #ffffff;
   font-family: "Roboto";
   font-size: 18px;
   width: 400px;
@@ -98,10 +106,11 @@
   font-family: sans-serif;
   font-weight: 500;
   font-size: 35px;
+  width: 450px;
 }
 
 .money {
-  color: #73e7d8;
+  color: #4ad8f1;
   font-family: "Lobster";
 }
 
@@ -111,8 +120,8 @@
 
 .shop-buttons-container {
   display: flex;
-  max-width: 300px;
-  justify-content: space-around;
+  max-width: 250px;
+  justify-content: space-between;
   margin-top: 30px;
 }
 

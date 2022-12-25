@@ -1,6 +1,8 @@
 import Header from "../Header";
 import ShopCard from "../ShopCard";
 import Glasses from "../Glasses";
+import AboutProduct from "../AboutProduct";
+import Footer from "../Footer";
 
 import "./index.css";
 
@@ -87,11 +89,14 @@ const EyeLux = () => (
   <div className="body">
     <Header />
     <ShopCard />
+    <AboutProduct />
+    <h1 className="frames-heading">Frames</h1>
     <div className="glasses">
       <Glasses glasses={hiltonGlasses} title="Hilton" />
       <Glasses glasses={formByGlasses} title="Formby" />
       <Glasses glasses={nelsonGlasses} title="Nelson" />
     </div>
+    <Footer />
   </div>
 );
 
