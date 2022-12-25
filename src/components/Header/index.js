@@ -4,6 +4,11 @@ import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineAccountCircle } from "react-icons/md";
 
+import { BiHomeHeart } from "react-icons/bi";
+import { FaStore } from "react-icons/fa";
+import { RiQuestionAnswerLine } from "react-icons/ri";
+import { FaHandsHelping } from "react-icons/fa";
+
 import HeaderItem from "../HeaderItem";
 import NavLinkCard from "../NavLinkCard";
 
@@ -65,6 +70,7 @@ const navLinksList = [
 const Header = () => {
   const [isClicked, setValue] = useState(false);
   const [isAccountActive, setAccountActive] = useState(false);
+  const [isSearchActive, setSearchActive] = useState(false);
   const [isActive, setActive] = useState("");
   const [navLinks, setLinks] = useState([]);
 
@@ -81,10 +87,16 @@ const Header = () => {
     setAccountActive((prevValue) => !prevValue);
   };
 
+  const onSearchClick = () => {
+    setSearchActive((prevValue) => !prevValue);
+  };
+
   const preventScroll = (event) => {
     event.preventDefault();
     event.stopPropagation();
   };
+
+  const navRef = useRef();
 
   useEffect(() => {
     const handler = (event) => {
@@ -106,8 +118,6 @@ const Header = () => {
 
   const collapseNavBar = isClicked ? "collapse-navbar" : "";
 
-  const navRef = useRef();
-
   const accountRef = useRef();
 
   useEffect(() => {
@@ -119,6 +129,18 @@ const Header = () => {
 
     document.addEventListener("mousedown", accntHandler);
   }, [isAccountActive]);
+
+  const searchRef = useRef();
+
+  useEffect(() => {
+    const searchHandler = (event) => {
+      if (!searchRef.current.contains(event.target)) {
+        setSearchActive(false);
+      }
+    };
+
+    document.addEventListener("mousedown", searchHandler);
+  }, [isSearchActive]);
 
   return (
     <>
@@ -149,7 +171,7 @@ const Header = () => {
 
             {/* Icons */}
             <div className="account-icons-container">
-              <BiSearchAlt className="account-icons" />
+              <BiSearchAlt className="account-icons" onClick={onSearchClick} />
               <AiOutlineShoppingCart className="account-icons" />
               <MdOutlineAccountCircle
                 className="account-icons"
@@ -158,6 +180,7 @@ const Header = () => {
             </div>
           </div>
         </nav>
+        {/* Collapse Containers */}
         <div className={`collapse-nav-container ${collapseNavBar}`}>
           {navLinks.map((each) => (
             <NavLinkCard key={each.id} cardDetails={each} />
@@ -171,13 +194,33 @@ const Header = () => {
             }`}
           >
             <div className="account-items-container">
-              <p className="account-items">Home</p>
-              <p className="account-items">Store</p>
-              <p className="account-items">About</p>
-              <p className="account-items">Help</p>
+              <p className="account-items">
+                <BiHomeHeart />
+                Home
+              </p>
+              <p className="account-items">
+                <FaStore />
+                Store
+              </p>
+              <p className="account-items">
+                <RiQuestionAnswerLine />
+                About
+              </p>
+              <p className="account-items">
+                <FaHandsHelping />
+                Help
+              </p>
             </div>
             <button className="logout-button">Logout</button>
           </div>
+        </div>
+        <div
+          ref={searchRef}
+          className={`search-bar-container ${
+            isSearchActive ? "active-search" : ""
+          }`}
+        >
+          <input type="search" placeholder="Search" className="search-bar" />
         </div>
       </div>
     </>

@@ -79,9 +79,9 @@
 }
 
 .account-frame {
-  width: 180px;
+  width: 250px;
   position: absolute;
-  background-color: #000000;
+  background-color: #00000050;
   height: 85%;
   right: -20%;
   transition: all 0.2s linear;
@@ -92,6 +92,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
+  backdrop-filter: blur(10px);
 }
 
 .active-account {
@@ -99,14 +100,19 @@
 }
 
 .account-items-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .account-items {
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Roboto";
   font-weight: 500;
   cursor: pointer;
   color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logout-button {
@@ -119,4 +125,32 @@
   font-family: "Roboto";
   font-weight: 600;
   cursor: pointer;
+}
+
+.search-bar-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  top: 3%;
+  visibility: hidden;
+  transition: all 0.1s linear;
+}
+
+.search-bar {
+  border: 0;
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #ffffff70;
+  padding-left: 20px;
+  color: #ffffff;
+  outline: none;
+}
+
+.active-search {
+  visibility: visible;
+  top: 10%;
 }
